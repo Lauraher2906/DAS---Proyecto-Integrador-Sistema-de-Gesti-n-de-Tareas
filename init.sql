@@ -1,0 +1,11 @@
+CREATE DATABASE IF NOT EXISTS demodb;
+
+USE demodb;
+
+CREATE TABLE IF NOT EXISTS tareas (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    titulo VARCHAR(255) NOT NULL,
+    descripcion TEXT,
+    estado VARCHAR(30) NOT NULL DEFAULT 'PENDIENTE',
+    fecha_creacion DATETIME NOT NULL
+);
